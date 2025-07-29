@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Shivam Sahu | Shivam Interior - Interior Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Cardo', serif;
+      color: #2c2c2c;
+      background-color: #fafafa;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #d4af37;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-tagline {
+      font-family: 'Cardo', serif;
+      font-size: 0.8rem;
+      color: #666;
+      font-style: italic;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #2c2c2c;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 400;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* About Content */
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .profile-section {
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 2rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      border: 5px solid #d4af37;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-name {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      color: #2c2c2c;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-title {
+      font-size: 1.3rem;
+      color: #d4af37;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .profile-location {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-link {
+      background: #d4af37;
+      color: #2c2c2c;
+      padding: 0.8rem 1.2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .about-content h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: #d4af37;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content ul {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Education Section */
+    .education-section {
+      background: #fff;
+      border-radius: 15px;
+      padding: 3rem;
+      margin: 3rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .degree-info h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+    }
+
+    .degree-info h4 {
+      font-size: 1.3rem;
+      color: #d4af37;
+      margin-bottom: 1rem;
+    }
+
+    .degree-info p {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .degree-image {
+      text-align: center;
+    }
+
+    .degree-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin: 3rem 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+    }
+
+    .skill-card h4 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .skill-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Back to Home Button */
+    .back-button {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #d4af37;
+      color: #2c2c2c;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      background: #128C7E;
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      }
+      50% {
+        box-shadow: 0 5px 25px rgba(37, 211, 102, 0.6);
+      }
+      100% {
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .about-container {
+        padding: 2rem 1rem;
+      }
+      
+      .profile-image {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Shivam Interior</span>
+        <span class="logo-tagline">Interior Design</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="portfolio.html">Our Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>About Me</h1>
+    <p>Meet the creative mind behind Shivam Interior - a passionate interior designer dedicated to transforming spaces with sustainable elegance.</p>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-container">
+    <div class="about-grid">
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="image/my pic.webp" alt="Shivam Sahu - Interior Designer">
+        </div>
+        <h2 class="profile-name">Shivam Sahu</h2>
+        <p class="profile-title">Master of Design in Interior & Retail Design</p>
+        <p class="profile-location">Durg, Bhilai, Chhattisgarh, India</p>
+        <div class="social-links">
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Portfolio</a>
+        </div>
+      </div>
+      
+      <div class="about-content">
+        <h2>My Story</h2>
+        <p>Hello! I'm Shivam Sahu, a passionate interior designer with a Master's degree in Interior and Retail Design from the prestigious World University of Design. My journey in design began with a deep fascination for how spaces can influence human emotions and behavior.</p>
+        
+        <p>At Shivam Interior, I believe that every space has a story to tell. My approach combines contemporary design principles with sustainable practices, creating environments that are not only beautiful but also mindful of our planet's resources.</p>
+        
+        <p>With expertise in both residential and commercial design, I specialize in creating spaces that reflect the unique personality and needs of each client while maintaining the highest standards of functionality and aesthetics.</p>
+        
+        <h2>My Philosophy</h2>
+        <p>I believe in designing with purpose - every element, every material, and every color choice serves a specific function while contributing to the overall harmony of the space. My designs are characterized by:</p>
+        
+        <ul>
+          <li><strong>Sustainability:</strong> Eco-friendly materials and energy-efficient solutions</li>
+          <li><strong>Functionality:</strong> Spaces that work seamlessly for their intended purpose</li>
+          <li><strong>Timelessness:</strong> Designs that remain relevant and beautiful for years to come</li>
+          <li><strong>Personalization:</strong> Each project reflects the unique vision of its occupants</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="education-section">
+      <h2 style="text-align: center; font-family: 'Cinzel', serif; color: #d4af37; margin-bottom: 2rem;">Education & Qualifications</h2>
+      <div class="education-grid">
+        <div class="degree-info">
+          <h3>Master of Design</h3>
+          <h4>Interior & Retail Design</h4>
+          <p><strong>Institution:</strong> World University of Design</p>
+          <p><strong>Location:</strong> India</p>
+          <p>This comprehensive program provided me with advanced knowledge in interior design principles, retail space planning, sustainable design practices, and the latest industry trends. The curriculum emphasized both theoretical understanding and practical application, preparing me to create innovative and functional design solutions.</p>
+        </div>
+        <div class="degree-image">
+          <img src="image/my degree.jpg" alt="Master of Design Degree Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+      <h2 style="text-align: center; font-family: 'Cinzel', serif; color: #d4af37; margin-bottom: 2rem;">Areas of Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Residential Design</h4>
+          <p>Creating personalized living spaces that reflect the unique lifestyle and preferences of homeowners, from cozy apartments to luxury villas.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Commercial Spaces</h4>
+          <p>Designing functional and attractive commercial environments including offices, retail stores, restaurants, and hospitality venues.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Sustainable Design</h4>
+          <p>Implementing eco-friendly materials, energy-efficient solutions, and sustainable practices to create environmentally conscious spaces.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Space Planning</h4>
+          <p>Optimizing layouts for maximum functionality, flow, and visual appeal while considering the specific needs of each project.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Material Selection</h4>
+          <p>Expert knowledge of materials, finishes, and textiles to create the perfect aesthetic and functional combination for each space.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Project Management</h4>
+          <p>Overseeing projects from concept to completion, ensuring timely delivery and maintaining the highest quality standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917987474330?text=Hello! I'm interested in your interior design services." class="floating-whatsapp" target="_blank">
+    <span>💬</span>
+  </a>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <script>
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+      }
+    });
+  </script>
+</body>
+</html> 

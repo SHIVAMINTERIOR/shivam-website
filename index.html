@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Interior | Sustainable Interior Design</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Shivam Interior - Professional interior design services in Raipur, Durg, and Bhilai. Sustainable, luxury interior design with M.Des expertise. Contact us for residential and commercial projects.">
+  <meta name="keywords" content="interior design, Raipur, Durg, Bhilai, sustainable design, luxury interiors, residential design, commercial spaces, Chhattisgarh">
+  <meta name="author" content="Shivam Sahu">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Shivam Interior | Sustainable Interior Design">
+  <meta property="og:description" content="Professional interior design services in Raipur, Durg, and Bhilai. Sustainable, luxury interior design with M.Des expertise.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shivaminterior.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Cardo', serif;
+      color: #2c2c2c;
+      background-color: #fafafa;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #d4af37;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-tagline {
+      font-family: 'Cardo', serif;
+      font-size: 0.8rem;
+      color: #666;
+      font-style: italic;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #2c2c2c;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 400;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d4af37;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section with Animated Background */
+    .hero {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    /* Animated Video-like Background */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(244, 208, 63, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+      animation: floatingLights 20s ease-in-out infinite;
+    }
+
+    /* Soft Floating Particles */
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.1), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(212, 175, 55, 0.1), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.08), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(244, 208, 63, 0.1), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.06), transparent);
+      background-repeat: repeat;
+      background-size: 200px 100px;
+      animation: floatingParticles 25s linear infinite;
+      opacity: 0.7;
+    }
+
+    /* Animated geometric shapes */
+    .floating-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .shape {
+      position: absolute;
+      opacity: 0.1;
+      animation: float 15s ease-in-out infinite;
+    }
+
+    .shape:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #d4af37, transparent);
+      border-radius: 50%;
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .shape:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #f4d03f, transparent);
+      border-radius: 50%;
+      top: 60%;
+      right: 15%;
+      animation-delay: 5s;
+    }
+
+    .shape:nth-child(3) {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #d4af37, transparent);
+      border-radius: 20%;
+      top: 40%;
+      left: 70%;
+      animation-delay: 10s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 2s ease-in-out;
+      line-height: 1.2;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #f0f0f0;
+      animation: fadeInUp 2.5s ease-in-out;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #d4af37, #f4d03f);
+      color: #2c2c2c;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 3s ease-in-out;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .cta-button {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+    }
+
+    .cta-button:active {
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #d4af37;
+    }
+
+    /* About Section */
+    .about {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+      position: relative;
+    }
+
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .about-image {
+      background: linear-gradient(45deg, #f0f0f0, #e8e8e8);
+      height: 400px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-style: italic;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+    }
+
+    /* Services Section */
+    .services {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+    }
+
+    .services-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .services-video {
+      width: 50%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .services-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .services-intro {
+      width: 45%;
+      padding: 2rem;
+    }
+
+    .services-intro h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+
+    .services-intro p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #d4af37;
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+    }
+
+    .service-card h3 {
+      transition: color 0.3s ease;
+    }
+
+    .service-card:hover h3 {
+      color: #d4af37;
+    }
+
+    .service-card h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #d4af37;
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+    }
+
+    .testimonial-card .quote {
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover .quote {
+      color: #2c2c2c;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .quote::before {
+      content: '"';
+      font-size: 3rem;
+      color: #d4af37;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      font-family: 'Cinzel', serif;
+    }
+
+    .client-info h4 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .client-info p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .portfolio-item {
+      background: linear-gradient(45deg, #f0f0f0, #e8e8e8);
+      height: 250px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-style: italic;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-item img {
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: #2c2c2c;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .portfolio-overlay h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .portfolio-overlay p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, #2c2c2c 0%, #1c1c1c 100%);
+      padding: 3rem 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p, .footer-section a {
+      color: #e0e0e0;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-section a:hover {
+      color: #d4af37;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+      color: #aaa;
+    }
+
+    /* Contact Buttons */
+    .contact-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-btn, .call-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.8rem 1.2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .call-btn {
+      background: #d4af37;
+      color: #2c2c2c;
+    }
+
+    .call-btn:hover {
+      background: #f4d03f;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .whatsapp-btn span, .call-btn span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      background: #128C7E;
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      }
+      50% {
+        box-shadow: 0 5px 25px rgba(37, 211, 102, 0.6);
+      }
+      100% {
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      }
+    }
+
+    /* Loading Screen */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    .loader {
+      text-align: center;
+    }
+
+    .loader-text {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: #d4af37;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .loader-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #e0e0e0;
+      border-top: 3px solid #d4af37;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Map Section */
+    .map-section {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .map-section h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .map-container {
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Enhanced Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes rotateIn {
+      from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Animation Classes */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-left {
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .slide-right {
+      animation: slideInRight 1s ease-out;
+    }
+
+    .scale-in {
+      animation: scaleIn 0.8s ease-out;
+    }
+
+    .rotate-in {
+      animation: rotateIn 1s ease-out;
+    }
+
+    .bounce-in {
+      animation: bounceIn 1s ease-out;
+    }
+
+    @keyframes floatingLights {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+      }
+      25% {
+        transform: translateY(-20px) rotate(90deg);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(-10px) rotate(180deg);
+        opacity: 0.8;
+      }
+      75% {
+        transform: translateY(-30px) rotate(270deg);
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes floatingParticles {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-100px);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.1;
+      }
+      25% {
+        transform: translateY(-20px) rotate(90deg);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translateY(-10px) rotate(180deg);
+        opacity: 0.15;
+      }
+      75% {
+        transform: translateY(-30px) rotate(270deg);
+        opacity: 0.1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .section {
+        padding: 3rem 1rem;
+      }
+      
+      .services-content {
+        flex-direction: column;
+      }
+      
+      .services-video {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 2rem;
+      }
+      
+      .services-intro {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-text">Shivam Interior</div>
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Shivam Interior</span>
+        <span class="logo-tagline">Interior Design</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="portfolio.html">Our Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <img src="image/LIVINGH.png" alt="Luxury Interior Design" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 0;">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Designing with Soul, Nature, and Story</h1>
+      <p>Welcome to Shivam Interior — Crafting meaningful spaces through sustainable interiors and timeless design narratives.</p>
+      <a href="#about" class="cta-button">Discover Our Vision</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <h2>Our Philosophy</h2>
+    <div class="about-content">
+      <div class="about-text animate-on-scroll">
+        <p>At Shivam Interior, we believe that every space tells a story. Our approach to interior design goes beyond aesthetics to create environments that nurture the soul and respect our planet.</p>
+        <p>We specialize in sustainable design practices, incorporating natural materials, energy-efficient solutions, and timeless aesthetics that stand the test of time. Each project is a collaboration between our vision and your dreams.</p>
+        <p>Our commitment to sustainability doesn't compromise on luxury or comfort. Instead, we prove that conscious design choices can create the most beautiful and meaningful spaces.</p>
+      </div>
+      <div class="about-image animate-on-scroll">
+        <img src="image/LIVING.jpg" alt="Luxury Living Room Design" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <h2>Our Services</h2>
+    <div class="services-content">
+      <div class="services-video animate-on-scroll">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          controls
+          style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          <source src="video/Hailuo_Video__Create a cinematic walkthroug_405858953504145412.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="services-intro animate-on-scroll">
+        <h3>Transforming Living Spaces</h3>
+        <p>Experience the art of interior design through our comprehensive services. We create beautiful, functional spaces that tell your unique story while embracing sustainable practices.</p>
+        <p>From concept to completion, our team brings expertise in modern design trends, sustainable materials, and innovative space planning to every project.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card animate-on-scroll">
+        <h3>Residential Design</h3>
+        <p>Transform your home into a sanctuary that reflects your personality while embracing sustainable living principles.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <h3>Commercial Spaces</h3>
+        <p>Create inspiring work environments that boost productivity while minimizing environmental impact.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <h3>Sustainable Consulting</h3>
+        <p>Expert guidance on eco-friendly materials, energy efficiency, and sustainable design practices.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <h3>Space Planning</h3>
+        <p>Optimize your space for functionality and flow while maintaining aesthetic harmony and sustainability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card animate-on-scroll">
+        <div class="quote">"Shivam Interior ने हमारे घर को एक sustainable sanctuary में बदल दिया। उनका attention to detail और eco-friendly approach हमारी expectations से कहीं बेहतर था।"</div>
+        <div class="client-info">
+          <h4>Priya Sharma</h4>
+          <p>Residential Client, Raipur</p>
+        </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll">
+        <div class="quote">"Shivam Interior की team ने हमारे office के लिए एक beautiful और functional space बनाया जो हमारे employees को बहुत पसंद आया। उनके sustainable design principles वाकई inspiring हैं।"</div>
+        <div class="client-info">
+          <h4>Rajesh Patel</h4>
+          <p>Commercial Client, Durg</p>
+        </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll">
+        <div class="quote">"Shivam Interior के साथ काम करना एक dream जैसा था। उन्होंने हमारी vision को perfectly समझा और एक ऐसा space deliver किया जो beautiful और environmentally conscious दोनों है।"</div>
+        <div class="client-info">
+          <h4>Anjali Verma</h4>
+          <p>Residential Client, Bhilai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section">
+    <h2>Featured Projects</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">A glimpse of our latest work. Click below to see our complete portfolio.</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="image/LIVING.jpg" alt="Luxury Living Room" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Luxury Living Room</h3>
+          <p>Elegant comfort meets sophistication</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/BED.jpg" alt="Master Bedroom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Master Bedroom</h3>
+          <p>Serene sanctuary design</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/BED (2).jpg" alt="Guest Bedroom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Guest Bedroom</h3>
+          <p>Welcoming comfort</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/Leonardo_Kino_XL_A_modern_commercial_reception_area_with_a_cle_0.jpg" alt="Commercial Reception" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Commercial Reception</h3>
+          <p>Professional elegance</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/LICININF ROOM LUXURY.jpg" alt="Luxury Dining Room" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Luxury Dining Room</h3>
+          <p>Sophisticated entertaining</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/LOUNCH 01.jpg" alt="Lounge Area" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Lounge Area</h3>
+          <p>Relaxation and style</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/BAR COUNTER.jpg" alt="Bar Counter" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Bar Counter</h3>
+          <p>Entertainment hub</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="image/Leonardo_Kino_XL_Italian_luxury_commercial_interior_lounge_cap_0.jpg" alt="Commercial Lounge" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <div class="portfolio-overlay">
+          <h3>Commercial Lounge</h3>
+          <p>Business sophistication</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="portfolio.html" class="cta-button">View All Projects</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: hello@shivaminterior.com</p>
+        <p>Phone: +91 7987474330</p>
+        <p>Phone: +91 8085596356</p>
+        <p>Address: Durg, Bhilai, Pin 491001, Borsi</p>
+        <p>Chhattisgarh, India</p>
+        <p>Hours: Mon-Sat 9AM-7PM</p>
+        <div class="contact-buttons">
+          <a href="https://wa.me/917987474330" class="whatsapp-btn" target="_blank">
+            <span>📱 WhatsApp</span>
+          </a>
+          <a href="tel:+917987474330" class="call-btn">
+            <span>📞 Call Now</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Pinterest</a></p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <p>Residential Design</p>
+        <p>Commercial Spaces</p>
+        <p>Sustainable Consulting</p>
+      </div>
+    </div>
+    <!-- Location Map Section -->
+    <div class="map-section">
+      <h3>Find Us</h3>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746984.5!2d80.5!3d21.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a251d0b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sBhilai%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1234567890"
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 10px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Shivam Interior. All rights reserved. | Sustainable Interior Design</p>
+    </div>
+  </footer>
+
+  <script>
+    // Loading screen
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        document.getElementById('loading-screen').classList.add('loading-hidden');
+      }, 1500);
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+      }
+    });
+
+    // Add dynamic particle effect
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.style.position = 'absolute';
+      particle.style.width = Math.random() * 4 + 1 + 'px';
+      particle.style.height = particle.style.width;
+      particle.style.background = 'rgba(212, 175, 55, 0.3)';
+      particle.style.borderRadius = '50%';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = '100%';
+      particle.style.pointerEvents = 'none';
+      particle.style.animation = `floatingParticles ${Math.random() * 20 + 10}s linear infinite`;
+      
+      document.querySelector('.hero').appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 30000);
+    }
+
+    // Create particles periodically
+    setInterval(createParticle, 2000);
+
+    // Scroll animation observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with animate-on-scroll class
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Add staggered animation delay to service cards
+    document.querySelectorAll('.service-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.2}s`;
+    });
+
+    // Add staggered animation delay to testimonial cards
+    document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.3}s`;
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917987474330?text=Hello! I'm interested in your interior design services." class="floating-whatsapp" target="_blank">
+    <span>💬</span>
+  </a>
+</body>
+</html>

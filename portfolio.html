@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work | Shivam Interior - Sustainable Interior Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Cardo', serif;
+      color: #2c2c2c;
+      background-color: #fafafa;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #d4af37;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-tagline {
+      font-family: 'Cardo', serif;
+      font-size: 0.8rem;
+      color: #666;
+      font-style: italic;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #2c2c2c;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 400;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Portfolio Grid */
+    .portfolio-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+    }
+
+    .portfolio-image {
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-image img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-content {
+      padding: 2rem;
+    }
+
+    .portfolio-content h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-content p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .project-type {
+      background: #d4af37;
+      color: #2c2c2c;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-area {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Back to Home Button */
+    .back-button {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #d4af37;
+      color: #2c2c2c;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      background: #128C7E;
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      }
+      50% {
+        box-shadow: 0 5px 25px rgba(37, 211, 102, 0.6);
+      }
+      100% {
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .portfolio-container {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Shivam Interior</span>
+        <span class="logo-tagline">Interior Design</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="portfolio.html">Our Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Our Portfolio</h1>
+    <p>Discover our collection of stunning interior design projects that showcase our commitment to luxury, sustainability, and timeless elegance.</p>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="portfolio-container">
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/LIVING.jpg" alt="Luxury Living Room">
+        </div>
+        <div class="portfolio-content">
+          <h3>Luxury Living Room</h3>
+          <p>A sophisticated living space designed for comfort and elegance. This project features premium materials, custom furniture, and a perfect balance of functionality and style.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Residential</span>
+            <span class="project-area">450 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/BED.jpg" alt="Master Bedroom">
+        </div>
+        <div class="portfolio-content">
+          <h3>Master Bedroom Sanctuary</h3>
+          <p>A serene master bedroom that serves as a peaceful retreat. The design incorporates soft lighting, premium textiles, and a calming color palette for ultimate relaxation.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Residential</span>
+            <span class="project-area">300 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/BED (2).jpg" alt="Guest Bedroom">
+        </div>
+        <div class="portfolio-content">
+          <h3>Guest Bedroom</h3>
+          <p>A welcoming guest bedroom that combines comfort with style. The space is designed to make visitors feel at home while maintaining the home's overall aesthetic.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Residential</span>
+            <span class="project-area">250 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/Leonardo_Kino_XL_A_modern_commercial_reception_area_with_a_cle_0.jpg" alt="Commercial Reception">
+        </div>
+        <div class="portfolio-content">
+          <h3>Commercial Reception Area</h3>
+          <p>A modern and professional reception area designed to create a lasting first impression. The space balances functionality with corporate elegance.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Commercial</span>
+            <span class="project-area">800 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/LICININF ROOM LUXURY.jpg" alt="Luxury Dining Room">
+        </div>
+        <div class="portfolio-content">
+          <h3>Luxury Dining Room</h3>
+          <p>An elegant dining space perfect for entertaining. The design features custom lighting, premium materials, and sophisticated details that create an unforgettable dining experience.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Residential</span>
+            <span class="project-area">400 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/LOUNCH 01.jpg" alt="Lounge Area">
+        </div>
+        <div class="portfolio-content">
+          <h3>Lounge Area</h3>
+          <p>A comfortable and stylish lounge area designed for relaxation and socializing. The space features plush seating, ambient lighting, and a warm, inviting atmosphere.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Commercial</span>
+            <span class="project-area">600 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/BAR COUNTER.jpg" alt="Bar Counter">
+        </div>
+        <div class="portfolio-content">
+          <h3>Bar Counter</h3>
+          <p>A sophisticated bar area that serves as the perfect entertainment hub. The design combines functionality with luxury, featuring premium materials and elegant lighting.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Commercial</span>
+            <span class="project-area">350 sq ft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="image/Leonardo_Kino_XL_Italian_luxury_commercial_interior_lounge_cap_0.jpg" alt="Commercial Lounge">
+        </div>
+        <div class="portfolio-content">
+          <h3>Commercial Lounge</h3>
+          <p>A luxurious commercial lounge that exudes sophistication and comfort. The space is designed to impress clients while providing a comfortable environment for business meetings.</p>
+          <div class="portfolio-details">
+            <span class="project-type">Commercial</span>
+            <span class="project-area">750 sq ft</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917987474330?text=Hello! I'm interested in your interior design services." class="floating-whatsapp" target="_blank">
+    <span>💬</span>
+  </a>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <script>
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+      }
+    });
+  </script>
+</body>
+</html> 
